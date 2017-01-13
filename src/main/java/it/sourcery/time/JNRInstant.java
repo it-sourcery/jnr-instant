@@ -29,9 +29,9 @@ public class JNRInstant {
 
     static LibC libc = LibraryLoader.create(LibC.class).load("c");
     static Runtime runtime = Runtime.getRuntime(libc);
-    static Timeval time = new Timeval(runtime);
 
     public static Instant now() {
+        Timeval time = new Timeval(runtime);
         libc.gettimeofday(time, null);
         long seconds= time.tv_sec.get();
         long micros = time.tv_usec.get() & 4294967295L;
