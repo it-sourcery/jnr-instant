@@ -11,9 +11,7 @@ import java.time.Duration;
 import java.time.Instant;
 import java.util.concurrent.TimeUnit;
 
-/**
- * Created by michaelandrepearce on 12/01/2017.
- */
+
 public class JNRInstant {
     public static final class Timeval extends Struct {
         public final time_t tv_sec = new time_t();
